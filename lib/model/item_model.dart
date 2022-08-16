@@ -8,13 +8,18 @@ enum ItemFlags {
 
 // this can be serialized into a json (or loaded from)
 class ItemModel {
-  int id = 0;
-  int flags = 0; // see ItemFlags for actual flags to use
+  /// Required
+
+  String id = "dev_null";
+  List<int> flags = []; // see ItemFlags for actual flags to use
   String name = 'Null';
   String desc = 'Testing Item.\n';
 
-  // json sub map
+  /// End Required
+
   Map<String, dynamic> additionalInfo = {};
+
+  int maxStackCount = 64;
 
   // Possible Inclustion?
   // int rarity = 0;
