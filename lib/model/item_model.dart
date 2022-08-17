@@ -1,5 +1,7 @@
 // Billy-Hostage
 
+import 'asset_model.dart';
+
 enum ItemFlags {
   willExpire,
   consumable,
@@ -12,10 +14,13 @@ class ItemModel {
 
   String id = "dev_null";
   List<int> flags = []; // see ItemFlags for actual flags to use
+  List<String> tags = [];
   String name = 'Null';
   String desc = 'Testing Item.\n';
 
   /// End Required
+
+  AssetModel thumbImg = AssetModel.getNone();
 
   Map<String, dynamic> additionalInfo = {};
 
