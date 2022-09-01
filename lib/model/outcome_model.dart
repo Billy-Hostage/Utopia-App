@@ -14,13 +14,15 @@ class OutcomeModel {
   int grantHp = 0; // can be negative
 
   // add and(or) remove item
-  List<int> grantItemsId = [0];
-  List<int> takeawayItemsId = [];
+  List<String> grantItemsId = [];
+  List<String> takeawayItemsId = [];
 
-  Map<int, int> grantRelations = {
+  Map<String, int> grantRelations = {
     // 2nd value can be negative
-    0: 10,
+    "null": 10,
   };
+
+  Map<String, dynamic> startComm = {};
 
   // fail process
   OutcomeFailProcess failProcess = OutcomeFailProcess.nofail;
